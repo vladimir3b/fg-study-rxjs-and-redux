@@ -1,0 +1,37 @@
+{
+  "name": "fg-study-rxjs-and-redux",
+  "version": "1.0.0",
+  "description": "Study RXJS and REDUX in Typescript",
+  "main": "index.js",
+  "scripts": {
+    "custom_redux_01": "nodemon ./src/custom-redux-01/index.ts",
+    "custom_redux_02": "nodemon ./src/custom-redux-02/index.ts",
+    "custom_redux_03": "nodemon ./src/custom-redux-03/index.ts",
+    "custom_redux_04": "nodemon ./src/custom-redux-04/index.ts"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirioan82/fg-study-rxjs-and-redux.git"
+  },
+  "keywords": [
+    "rxjs",
+    "redux"
+  ],
+  "author": "Vladimir-Ioan Văraru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirioan82/fg-study-rxjs-and-redux/issues"
+  },
+  "homepage": "https://github.com/vladimirioan82/fg-study-rxjs-and-redux#readme",
+  "dependencies": {
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9",
+    "redux": "^4.0.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.1"
+  }
+}
