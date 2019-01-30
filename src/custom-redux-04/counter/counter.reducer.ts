@@ -1,4 +1,4 @@
-import { Action } from '../ngrx-fake/ngrx';
+import { Action } from 'redux';
 
 
 export namespace CounterReducer {

@@ -7,7 +7,10 @@
     "custom_redux_01": "nodemon ./src/custom-redux-01/index.ts",
     "custom_redux_02": "nodemon ./src/custom-redux-02/index.ts",
     "custom_redux_03": "nodemon ./src/custom-redux-03/index.ts",
-    "custom_redux_04": "nodemon ./src/custom-redux-04/index.ts"
+    "custom_redux_04": "nodemon ./src/custom-redux-04/index.ts",
+    "for/pure_functions": "nodemon ./src/fundamentals-of-redux/pure-functions.ts",
+    "for/very_simple_redux_example": "nodemon ./src/fundamentals-of-redux/very-simple-redux-example.ts",
+    "for/review_example_1": "nodemon ./src/fundamentals-of-redux/review_example_1.ts"
 
   },
   "repository": {
