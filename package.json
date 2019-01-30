@@ -10,8 +10,9 @@
     "custom_redux_04": "nodemon ./src/custom-redux-04/index.ts",
     "for/pure_functions": "nodemon ./src/fundamentals-of-redux/pure-functions.ts",
     "for/very_simple_redux_example": "nodemon ./src/fundamentals-of-redux/very-simple-redux-example.ts",
-    "for/review_example_1": "nodemon ./src/fundamentals-of-redux/review_example_1.ts"
-
+    "for/review_example_1": "nodemon ./src/fundamentals-of-redux/review_example_1.ts",
+    "for/review_example_2": "nodemon ./src/fundamentals-of-redux/review_example_2.ts",
+    "for/mutables_and_immutables": "nodemon ./src/fundamentals-of-redux/mutables-and-immutables.ts"
   },
   "repository": {
     "type": "git",
