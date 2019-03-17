@@ -4,15 +4,7 @@
   "description": "Study RXJS and REDUX in Typescript",
   "main": "index.js",
   "scripts": {
-    "custom_redux_01": "nodemon ./src/custom-redux-01/index.ts",
-    "custom_redux_02": "nodemon ./src/custom-redux-02/index.ts",
-    "custom_redux_03": "nodemon ./src/custom-redux-03/index.ts",
-    "custom_redux_04": "nodemon ./src/custom-redux-04/index.ts",
-    "for/pure_functions": "nodemon ./src/fundamentals-of-redux/pure-functions.ts",
-    "for/very_simple_redux_example": "nodemon ./src/fundamentals-of-redux/very-simple-redux-example.ts",
-    "for/review_example_1": "nodemon ./src/fundamentals-of-redux/review_example_1.ts",
-    "for/review_example_2": "nodemon ./src/fundamentals-of-redux/review_example_2.ts",
-    "for/mutables_and_immutables": "nodemon ./src/fundamentals-of-redux/mutables-and-immutables.ts"
+    "app-01": "nodemon ./src/app-01.ts"
   },
   "repository": {
     "type": "git",
