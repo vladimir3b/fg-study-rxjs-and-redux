@@ -4,10 +4,7 @@
   "description": "Study RXJS and REDUX in Typescript",
   "main": "index.js",
   "scripts": {
-    "app-01": "nodemon ./src/app-01.ts",
-    "app-02": "nodemon ./src/app-02.ts",
-    "app-03": "nodemon ./src/app-03.ts",
-    "app-04": "nodemon ./src/app-04.ts"
+    "app": "nodemon ./src/app.ts"
   },
   "repository": {
     "type": "git",
