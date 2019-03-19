@@ -1,5 +1,4 @@
-// Declare actions model
-export interface IActionModel {
+export interface IActionModel<T> {
   type: string;
-  payload?: any;
+  payload?: T;
 }

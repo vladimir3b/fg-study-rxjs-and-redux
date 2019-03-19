@@ -1,33 +1,23 @@
-import {
-  DECREMENT_ACTION,
-  DIVIDE_ACTION,
-  INCREMENT_ACTION,
-  MULTIPLY_ACTION,
-  RESET_ACTION
-} from './calculate/calculate.actions';
-import { createStore } from './my-redux/my-redux.store';
-import { calculateReducer } from './calculate/calculate.reducer';
-import { IStoreModel } from './my-redux/models/store.mode';
+import { CHANGE_EMAIL, CHANGE_USERNAME, CHANGE_PASSWORD, RESET } from './manage-users/manage-users.actions';
+import { ManagerUserReducer } from './manage-users/manage-user.reducer';
+import { IStoreModel } from './my-redux/models/store.model';
+import { IUserModel } from './models/user.model';
+import { createStore } from './my-redux';
 
+const INITIAL_STATE: IUserModel = {
+  username: 'maria-perez',
+  password: 'm4r!@p3r35',
+  email: 'maria-perez92@yahoo.com'
+}
 
-const INITIAL_STATE: number = 5;
-const store: IStoreModel<number> = createStore(calculateReducer, INITIAL_STATE);
+const store: IStoreModel<IUserModel> = createStore(ManagerUserReducer, INITIAL_STATE);
 
-store.stateObserver.subscribe(() => console.log(store.getState()));
+store.subscribe(() => console.log(store.getState()));
 
-store.dispatch(INCREMENT_ACTION);
-store.dispatch(MULTIPLY_ACTION);
-store.dispatch(INCREMENT_ACTION);
-store.dispatch(INCREMENT_ACTION);
-store.dispatch(INCREMENT_ACTION);
-store.dispatch(INCREMENT_ACTION);
-store.dispatch(INCREMENT_ACTION);
-store.dispatch(DIVIDE_ACTION);
-store.dispatch(RESET_ACTION);
-store.dispatch(DECREMENT_ACTION);
-store.dispatch(DECREMENT_ACTION);
-store.dispatch(DECREMENT_ACTION);
-store.dispatch(DECREMENT_ACTION);
-
-
-
+store.dispatch(CHANGE_EMAIL);
+store.dispatch(CHANGE_USERNAME);
+store.dispatch(CHANGE_PASSWORD);
+store.dispatch(RESET);
+store.dispatch(CHANGE_EMAIL);
+store.dispatch(CHANGE_USERNAME);
+store.dispatch(CHANGE_PASSWORD);
