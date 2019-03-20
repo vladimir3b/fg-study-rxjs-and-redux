@@ -1,4 +1,4 @@
-export interface IActionModel<T> {
+export interface IActionModel {
   type: string;
-  payload?: T;
+  payload?: any;
 }

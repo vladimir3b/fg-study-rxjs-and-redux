@@ -1,23 +1,36 @@
-import { CHANGE_EMAIL, CHANGE_USERNAME, CHANGE_PASSWORD, RESET } from './manage-users/manage-users.actions';
-import { ManagerUserReducer } from './manage-users/manage-user.reducer';
+import { createStore } from './my-redux/index';
 import { IStoreModel } from './my-redux/models/store.model';
-import { IUserModel } from './models/person.model';
-import { createStore } from './my-redux';
+import { ManagePersonsReducer } from './manage-persons/manage-persons.reducer';
+import { PERSONS } from './data/persons.data';
+import { ManagePersonsActions } from './manage-persons/manage-persons.actions';
 
-const INITIAL_STATE: IUserModel = {
-  username: 'maria-perez',
-  password: 'm4r!@p3r35',
-  email: 'maria-perez92@yahoo.com'
-}
+const store: IStoreModel<ManagePersonsReducer.IState> = createStore(
+  ManagePersonsReducer.reducer,
+  ManagePersonsReducer.INITIAL_STATE
+);
 
-const store: IStoreModel<IUserModel> = createStore(ManagerUserReducer, INITIAL_STATE);
+store.subscribe(() => {
+  console.log(store.getState());
+  console.log('----------------------------------------------------');
+});
 
-store.subscribe(() => console.log(store.getState()));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[0]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[1]}));
+store.dispatch(new ManagePersonsActions.DeleteAllPersons());
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[2]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[3]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[4]}));
+store.dispatch(new ManagePersonsActions.DeletePerson({personId: '5c9251fa085b6306d89f2545'}));
+store.dispatch(new ManagePersonsActions.DeletePerson({personId: '5c9251fa085b6306d89f2545'}));
+store.dispatch(new ManagePersonsActions.DeletePerson({personId: '5c9251fa085b6306d89f2545'}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[4]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[4]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[4]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[4]}));
+store.dispatch(new ManagePersonsActions.AddNewPerson({person: PERSONS[2]}));
+store.dispatch(new ManagePersonsActions.UpdatePerson({person: PERSONS[2], personId: PERSONS[4].id}));
+store.dispatch(new ManagePersonsActions.UpdatePerson({person: PERSONS[6], personId: PERSONS[4].id}));
 
-store.dispatch(CHANGE_EMAIL);
-store.dispatch(CHANGE_USERNAME);
-store.dispatch(CHANGE_PASSWORD);
-store.dispatch(RESET);
-store.dispatch(CHANGE_EMAIL);
-store.dispatch(CHANGE_USERNAME);
-store.dispatch(CHANGE_PASSWORD);
+
+
+

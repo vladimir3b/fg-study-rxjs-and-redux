@@ -21,6 +21,7 @@ interface IContactModel {
 }
 
 interface IPersonModel {
+  id: string;
   name: INameModel;
   birthDate: Date;
   gender: GenderType;

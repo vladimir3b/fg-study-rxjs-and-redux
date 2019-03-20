@@ -22,7 +22,7 @@ namespace MyStore {
       return this._state
     }
 
-    public dispatch(action: IActionModel<T>): void {
+    public dispatch(action: IActionModel): void {
       this._state = this._reducer(this._state, action);
       this._watcher.next();
     }
