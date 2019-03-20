@@ -1,6 +1,6 @@
 import { IActionModel } from './../my-redux/models/action.model';
 import { ReducerType } from './../my-redux/models/reducer.type';
-import { IUserModel } from '../models/user.model';
+import { IUserModel } from '../models/person.model';
 
 const NULL_USERNAME: IUserModel = {
   username: '',

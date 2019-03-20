@@ -1,4 +1,4 @@
-import { IUserModel } from './../models/user.model';
+import { IUserModel } from '../models/person.model';
 import { IActionModel } from './../my-redux/models/action.model';
 
 // Define actions

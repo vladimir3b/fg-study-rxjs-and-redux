@@ -1,7 +1,7 @@
 import { CHANGE_EMAIL, CHANGE_USERNAME, CHANGE_PASSWORD, RESET } from './manage-users/manage-users.actions';
 import { ManagerUserReducer } from './manage-users/manage-user.reducer';
 import { IStoreModel } from './my-redux/models/store.model';
-import { IUserModel } from './models/user.model';
+import { IUserModel } from './models/person.model';
 import { createStore } from './my-redux';
 
 const INITIAL_STATE: IUserModel = {
